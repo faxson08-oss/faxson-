@@ -691,6 +691,7 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#links">Links</a></li>
+                        <li><a href="#games">Games</a></li>
                         <li><button class="theme-toggle" id="themeToggle">
                             <i class="fas fa-moon"></i> Dark
                         </button></li>
@@ -766,6 +767,25 @@
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
                     <p>Get in touch</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games">
+        <div class="container">
+            <h2 class="section-title">My Games</h2>
+            <div class="links-grid">
+                <a href="https://faxson08-oss.github.io/Faxson/" target="_blank" class="link-card">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Faxson Game</h3>
+                    <p>Play my first game</p>
+                </a>
+                <a href="https://faxson08-oss.github.io/Level-Devil/" target="_blank" class="link-card">
+                    <i class="fas fa-dragon"></i>
+                    <h3>Level Devil</h3>
+                    <p>Challenge yourself</p>
                 </a>
             </div>
         </div>
@@ -949,6 +969,8 @@
             card.addEventListener('click', (e) => {
                 if (card.href.includes('mailto:')) {
                     showToast('Opening email client...');
+                } else if (card.href.includes('faxson08-oss.github.io')) {
+                    showToast('Loading game...');
                 } else {
                     showToast('Opening link in new tab...');
                 }
